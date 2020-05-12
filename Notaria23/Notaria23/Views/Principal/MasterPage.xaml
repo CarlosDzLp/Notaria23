@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:page="clr-namespace:Notaria23.Views.Principal"
+    x:Class="Notaria23.Views.Principal.MasterPage"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    BarBackgroundColor="White"
+    SelectedTabColor="#5B2273"
+    UnselectedTabColor="#D9DBE3"
+    Title="Home">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <page:MessagePage/>
+        <page:AccountPage/>
+    </TabbedPage.Children>
+</TabbedPage>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Notaria23.Controls"
+    NavigationPage.HasNavigationBar="True"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="White"
+    xmlns:fontawesome="clr-namespace:Notaria23.Utils"
+    x:Class="Notaria23.Views.Session.LoginPage">
+    <ContentPage.Content>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <StackLayout
+                    Spacing="15"
+                    Padding="30,0"
+                    VerticalOptions="CenterAndExpand">
+                    <Image
+                        Margin="20,0,20,40"
+                        Source="logo_notaria"/>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                TextColor="#5B2273"
+                                VerticalOptions="Center"
+                                Grid.Column="0"
+                                Text="{x:Static fontawesome:FontAwesomeIcons.User}"
+                                FontFamily="{StaticResource FontAwesomeSolid}"/>
+                            <Entry
+                                Grid.Column="1"
+                                TextColor="#5B2273"
+                                Placeholder="Correo"/>
+                        </Grid>
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                VerticalOptions="Center"
+                                TextColor="#5B2273"
+                                Grid.Column="0"
+                                Text="{x:Static fontawesome:FontAwesomeIcons.Password}"
+                                FontFamily="{StaticResource FontAwesomeSolid}"/>
+                            <Entry
+                                Grid.Column="1"
+                                IsPassword="True"
+                                TextColor="#5B2273"
+                                Placeholder="Contraseña"/>
+                        </Grid>
+                        
+                    </controls:CanvasView>
+                    <Button
+                        CornerRadius="0"
+                        BackgroundColor="#5B2273"
+                        Text="Iniciar Sesion"
+                        FontSize="Body"
+                        Command="{Binding SigInCommand}"
+                        ContentLayout="Right,10"
+                        TextColor="White">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="{StaticResource FontAwesomeRegular}"
+                                Glyph="{x:Static fontawesome:FontAwesomeIcons.Send}"
+                                Size="20"
+                                Color="White" >
+                            </FontImageSource>
+                        </Button.ImageSource>
+                    </Button>
+                </StackLayout>
+                <Grid              
+                    VerticalOptions="End">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image
+                        HorizontalOptions="End"
+                        Grid.Row="1"
+                        Source="cuadros"/>
+                    <StackLayout
+                        Margin="0,0,30,0"
+                        Grid.Row="0"
+                        HorizontalOptions="End"
+                        Orientation="Horizontal">
+                        <Label
+                            TextColor="#5B2273"
+                            Text="¿Nuevo?"/>
+                        <Label
+                            FontAttributes="Bold"
+                            TextColor="#5B2273"
+                            Text="Registrate Aqui!!">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
