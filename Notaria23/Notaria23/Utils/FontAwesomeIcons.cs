@@ -10,5 +10,12 @@ namespace Notaria23.Utils
         public const string Register = "\uf2f6";
         public const string Message = "\uf086";
         public const string Camera = "\uf030";
+        public const string Telephone = "\uf879";
+        public const string User_Add = "\uf234";
+        public const string Video = "\uf03d";
+        public const string SendMessage = "\uf4ad";
+        public const string VideoCall = "\uf2a0";
+        public const string Exit = "\uf00d";
+        public const string Arrow_Down = "\uf078";
     }
 }

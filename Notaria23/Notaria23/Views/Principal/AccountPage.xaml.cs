@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Notaria23.ViewModels.Principal;
 using Xamarin.Forms;
 
 namespace Notaria23.Views.Principal
@@ -10,6 +10,7 @@ namespace Notaria23.Views.Principal
         public AccountPage()
         {
             InitializeComponent();
+            this.BindingContext = new AccountPageViewModel();
         }
     }
 }

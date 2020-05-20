@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Notaria23.Views.Principal.AccountPage"
     xmlns:fontawesome="clr-namespace:Notaria23.Utils"
+    xmlns:controls="clr-namespace:Notaria23.Controls"
     BackgroundColor="White"
     Title="Cuenta">
     <ContentPage.IconImageSource>
@@ -13,5 +14,240 @@
             Size="20"/>
     </ContentPage.IconImageSource>
     <ContentPage.Content>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <StackLayout>
+                    <StackLayout
+                        BackgroundColor="#EDEDED"
+                        HeightRequest="200"
+                        Padding="30,0">
+                        <Grid
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image 
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                HeightRequest="120"
+                                Source="{Binding User.ImageByte,Converter={StaticResource imageconvertbytes}}">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding LoadPhotoCommand}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </StackLayout>
+                    
+                    <StackLayout
+                        Spacing="15"
+                        Padding="30,20,30,0">
+                        <controls:CanvasView
+                        CornerRadius="4"
+                        Padding="10,15"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Entry
+                                Text="{Binding User.Name}"
+                                Grid.Column="0"
+                                TextColor="#5B2273"
+                                Placeholder="Nombre"/>
+                        </Grid>
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        Padding="10,15"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Entry
+                                Text="{Binding User.LastName}"
+                                Grid.Column="0"
+                                TextColor="#5B2273"
+                                Placeholder="Apellidos"/>
+                        </Grid>
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        Padding="10,15"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                TextColor="#5B2273"
+                                VerticalOptions="Center"
+                                Grid.Column="0"
+                                Text="{x:Static fontawesome:FontAwesomeIcons.Email}"
+                                FontFamily="{StaticResource FontAwesomeSolid}"/>
+                            <Entry
+                                Text="{Binding User.Email}"
+                                Grid.Column="1"
+                                Keyboard="Email"
+                                TextColor="#5B2273"
+                                Placeholder="Correo"/>
+                        </Grid>                       
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        Padding="10,15"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                TextColor="#5B2273"
+                                VerticalOptions="Center"
+                                Grid.Column="0"
+                                Text="{x:Static fontawesome:FontAwesomeIcons.Telephone}"
+                                FontFamily="{StaticResource FontAwesomeSolid}"/>
+                            <Entry
+                                Text="{Binding User.Telephone}"
+                                Keyboard="Telephone"
+                                Grid.Column="1"
+                                TextColor="#5B2273"
+                                Placeholder="Telefono"/>
+                        </Grid>                       
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        Padding="10,15"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                TextColor="#5B2273"
+                                VerticalOptions="Center"
+                                Grid.Column="0"
+                                Text="{x:Static fontawesome:FontAwesomeIcons.User}"
+                                FontFamily="{StaticResource FontAwesomeSolid}"/>
+                            <Entry
+                                Text="{Binding User.User}"
+                                Keyboard="Default"
+                                Grid.Column="1"
+                                TextColor="#5B2273"
+                                Placeholder="Usuario"/>
+                        </Grid>                       
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="4"
+                        Padding="10,15"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10,15"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                TextColor="#5B2273"
+                                VerticalOptions="Center"
+                                Grid.Column="0"
+                                Text="{x:Static fontawesome:FontAwesomeIcons.Password}"
+                                FontFamily="{StaticResource FontAwesomeSolid}"/>
+                            <Entry
+                                Text="{Binding User.Password}"
+                                Grid.Column="1"
+                                IsPassword="True"
+                                TextColor="#5B2273"
+                                Placeholder="Contraseña"/>
+                        </Grid>                       
+                    </controls:CanvasView>
+                        <Grid
+                            Margin="0,0,0,20">
+                            <Button
+                                Grid.Column="0"
+                                CornerRadius="0"
+                                Margin="0,0,0,0"
+                                BackgroundColor="#5B2273"
+                                Text="Actualizar Datos"
+                                FontSize="Body"
+                                Command="{Binding UpdateCommand}"
+                                ContentLayout="Right,10"
+                                TextColor="White">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource FontAwesomeSolid}"
+                                        Glyph="{x:Static fontawesome:FontAwesomeIcons.User}"
+                                        Size="20"
+                                        Color="White" >
+                                    </FontImageSource>
+                                </Button.ImageSource>
+                            </Button>
+                    <Button
+                        Grid.Column="1"
+                        CornerRadius="0"
+                        Margin="0,0,0,0"
+                        BackgroundColor="#5B2273"
+                        Text="Cerrar Sesion"
+                        FontSize="Body"
+                        Command="{Binding LogOutCommand}"
+                        ContentLayout="Right,10"
+                        TextColor="White">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="{StaticResource FontAwesomeSolid}"
+                                Glyph="{x:Static fontawesome:FontAwesomeIcons.Register}"
+                                Size="20"
+                                Color="White"/>
+                        </Button.ImageSource>
+                    </Button>
+                        </Grid>
+                    
+                </StackLayout>
+                    <Image
+                        HorizontalOptions="End"
+                        Source="cuadros"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

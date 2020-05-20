@@ -41,9 +41,10 @@
                                 Text="{x:Static fontawesome:FontAwesomeIcons.User}"
                                 FontFamily="{StaticResource FontAwesomeSolid}"/>
                             <Entry
+                                Text="{Binding User}"
                                 Grid.Column="1"
                                 TextColor="#5B2273"
-                                Placeholder="Correo"/>
+                                Placeholder="Usuario"/>
                         </Grid>
                     </controls:CanvasView>
                     <controls:CanvasView
@@ -67,6 +68,7 @@
                                 Text="{x:Static fontawesome:FontAwesomeIcons.Password}"
                                 FontFamily="{StaticResource FontAwesomeSolid}"/>
                             <Entry
+                                Text="{Binding Password}"
                                 Grid.Column="1"
                                 IsPassword="True"
                                 TextColor="#5B2273"

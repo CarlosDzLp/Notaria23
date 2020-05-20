@@ -8,11 +8,6 @@
     android:TabbedPage.ToolbarPlacement="Bottom"
     BarBackgroundColor="White"
     SelectedTabColor="#5B2273"
-    UnselectedTabColor="#D9DBE3"
-    Title="Home">
+    UnselectedTabColor="#D9DBE3">
     <!--Pages can be added as references or inline-->
-    <TabbedPage.Children>
-        <page:MessagePage/>
-        <page:AccountPage/>
-    </TabbedPage.Children>
 </TabbedPage>
