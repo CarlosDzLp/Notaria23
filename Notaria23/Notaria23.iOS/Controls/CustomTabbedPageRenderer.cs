@@ -38,11 +38,12 @@ namespace Notaria23.iOS.Controls
 
         UIImage UndeLineColorPosition(UIColor color, CGSize size, CGSize lineSize)
         {
-            var rect = new CGRect(0, 0, size.Width, size.Height);
+            var rect = new CGRect(0, 0, size.Width, size.Height-5);
             var rectLine = new CGRect(0, size.Height - lineSize.Height, lineSize.Width, lineSize.Height);
             UIGraphics.BeginImageContextWithOptions(size, false, 0);
             UIColor.Clear.SetFill();
-            UIGraphics.RectFill(rect); color.SetFill();
+            UIGraphics.RectFill(rect);
+            color.SetFill();
             UIGraphics.RectFill(rectLine);
             var img = UIGraphics.GetImageFromCurrentImageContext();
             UIGraphics.EndImageContext();

@@ -79,6 +79,7 @@
     <Compile Include="Controls\ImageGifsRenderer.cs" />
     <Compile Include="Controls\CustomTimePickerRenderer.cs" />
     <Compile Include="Controls\CustomDatePickerRenderer.cs" />
+    <Compile Include="Controls\CustomKeyboardViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

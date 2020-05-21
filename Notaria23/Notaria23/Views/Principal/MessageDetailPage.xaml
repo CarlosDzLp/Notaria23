@@ -3,8 +3,137 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Notaria23.Views.Principal.MessageDetailPage"
+    xmlns:fontawesome="clr-namespace:Notaria23.Utils"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    xmlns:controls="clr-namespace:Notaria23.Controls"
     BackgroundColor="White"
     Title="{Binding Title}">
     <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <controls:CustomListView
+                    Grid.Row="0"
+                    IsRefreshing="{Binding IsRefreshing}"
+                    IsVisible="{Binding Isvisible}"
+                    Footer=""
+                    SelectedItemCommand="{Binding SelectedUserMessage}"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="Default"
+                    SeparatorColor="#EDEDED"
+                    ItemsSource="{Binding ListUserMessage}">
+                    <controls:CustomListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid
+                                    RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackLayout
+                                        Grid.Row="0"
+                                        Grid.Column="0">
+                                        <controls:CircleImage
+                                            WidthRequest="80"
+                                            HeightRequest="80"
+                                            Source="{Binding Image}"/>
+                                    </StackLayout>
+                                    <StackLayout
+                                        Grid.Row="0"
+                                        VerticalOptions="Center"
+                                        Orientation="Vertical"
+                                        Grid.Column="1">
+                                        <StackLayout
+                                            Orientation="Horizontal">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                TextColor="Black"
+                                                Text="Nombre: "/>
+                                            <Label
+                                                TextColor="Black"
+                                                Text="{Binding Name}"/>
+                                            <Label
+                                                TextColor="Black"
+                                                Text="{Binding LastName}"/>
+                                        </StackLayout>
+                                        <StackLayout
+                                            Orientation="Horizontal">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                TextColor="Black"
+                                                Text="Telefono: "/>
+                                            <Label
+                                                TextColor="Black"
+                                                Text="{Binding Telephone}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <StackLayout
+                                        Grid.Row="0"
+                                        VerticalOptions="Center"
+                                        Orientation="Vertical"
+                                        Grid.Column="2">
+                                        <StackLayout
+                                            Margin="0,0,20,0"
+                                            HorizontalOptions="End">
+                                            <Image>
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="{StaticResource FontAwesomeRegular}"
+                                                        Glyph="{x:Static fontawesome:FontAwesomeIcons.SendMessage}"
+                                                        Color="#5B2273"/>
+                                                </Image.Source>
+                                            </Image>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </controls:CustomListView.ItemTemplate>
+                </controls:CustomListView>
+                <controls:KeyboardView
+                    VerticalOptions="End"
+                    Grid.Row="1">
+                    <controls:CanvasView                        
+                        CornerRadius="15"
+                        Elevation="1"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="10,0"/>
+                                <On Platform="iOS" Value="10"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Entry
+                                Grid.Column="0"
+                                PlaceholderColor="Gray"
+                                Placeholder="Escribe Mensaje"/>
+                            <Image
+                                Grid.Column="1">
+                                <Image.Source>
+                                    <FontImageSource
+                                        Size="30"
+                                        Color="#5B2273"
+                                        FontFamily="{StaticResource FontAwesomeRegular}"
+                                        Glyph="{x:Static fontawesome:FontAwesomeIcons.Send}"/>
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </controls:CanvasView>
+                </controls:KeyboardView>              
+            </Grid>   
     </ContentPage.Content>
 </ContentPage>
