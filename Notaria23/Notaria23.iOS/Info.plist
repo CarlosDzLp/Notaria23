@@ -54,5 +54,7 @@
 	<string>LaunchScreen</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+<string>Fill in a reason why your app needs access to location.</string>
 </dict>
 </plist>

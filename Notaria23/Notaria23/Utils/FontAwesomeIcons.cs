@@ -3,19 +3,14 @@ namespace Notaria23.Utils
 {
     public static partial class FontAwesomeIcons
     {
-        public const string Email = "\uf0e0";
-        public const string Password = "\uf023";
-        public const string Send = "\uf1d8";
-        public const string User = "\uf007";
-        public const string Register = "\uf2f6";
-        public const string Message = "\uf086";
-        public const string Camera = "\uf030";
-        public const string Telephone = "\uf879";
-        public const string User_Add = "\uf234";
-        public const string Video = "\uf03d";
-        public const string SendMessage = "\uf4ad";
-        public const string VideoCall = "\uf2a0";
-        public const string Exit = "\uf00d";
-        public const string Arrow_Down = "\uf078";
+        public const string Hamburguer = "\uf0c9";
+        public const string Home = "\uf015";
+        public const string Notaria = "\uf518";
+        public const string Online = "\uf0ac";
+        public const string Requisitos = "\uf02d";
+        public const string Directorio = "\uf14e";
+        public const string Contacto = "\uf2c2";
+        public const string Point = "\uf111";
+        public const string Plus = "\uf067";
     }
 }

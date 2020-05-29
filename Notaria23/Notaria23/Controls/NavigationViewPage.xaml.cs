@@ -10,12 +10,12 @@ namespace Notaria23.Controls
         public NavigationViewPage()
         {
             InitializeComponent();
-            this.BindingContext = new BindableBase();
+            
         }
         public NavigationViewPage(Page root):base(root)
         {
             InitializeComponent();
-            this.BindingContext = new BindableBase();
+            
         }
     }
 }

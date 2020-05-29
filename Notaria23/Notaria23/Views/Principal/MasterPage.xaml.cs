@@ -10,27 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace Notaria23.Views.Principal
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterPage : TabbedPage
+    public partial class MasterPage : MasterDetailPage
     {
         public MasterPage()
         {
             InitializeComponent();
-            var user = DbContext.Instance.GetUser();
-            if(user.UserType == 0)
-            {
-                //USUARIO
-                Children.Add(new MessagePage());
-                Children.Add(new VideoCallPage());
-                Children.Add(new AccountPage());
-            }
-            else
-            {
-                //ADMINISTRADOR
-                Children.Add(new MessagePage());
-                Children.Add(new VideoCallPage());
-                Children.Add(new UserEnabledPage());
-                Children.Add(new AccountPage());
-            }
+            App.MasterDetailPage = this;
         }
     }
 }

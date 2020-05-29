@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Notaria23.Helpers;
+using Notaria23.Models.Menus;
+using Notaria23.Views.Principal;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
@@ -35,15 +37,9 @@ namespace Notaria23.ViewModels.Base
         public BindableBase()
         {
             dial = DependencyService.Get<IDialogs>();
-            AddVideoCallCommand = new Command(AddVideoCallCommandExecuted);
         }
-
-        
         #endregion
 
-        #region Command
-        public ICommand AddVideoCallCommand { get; set; }
-        #endregion
 
         #region Dialogs
         public void Snack(string message, string title, TypeSnackbar typeSnack)
@@ -64,10 +60,15 @@ namespace Notaria23.ViewModels.Base
         }
         #endregion
 
-        #region CommandExecuted
-        private void AddVideoCallCommandExecuted()
+        #region Methods
+        public void NavigationAsync(MenuModel menuModel)
         {
-            PopupNavigation.Instance.PushAsync(new Views.Principal.Popup.CreateSessionViewCallPopup());
+            App.MasterDetailPage.IsPresented = false;
+            if(menuModel.TargetType != typeof(HomePage))
+            {
+                var page = (Page)Activator.CreateInstance(menuModel.TargetType);
+                App.MasterDetailPage.Detail.Navigation.PushAsync(page);
+            }
         }
         #endregion
     }

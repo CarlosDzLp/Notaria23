@@ -10,6 +10,7 @@ using Plugin.CurrentActivity;
 using Android.Support.V4.App;
 using Android;
 using Plugin.Permissions;
+using Octane.Xamarin.Forms.VideoPlayer.Android;
 
 namespace Notaria23.Droid
 {
@@ -26,6 +27,8 @@ namespace Notaria23.Droid
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
+            FormsVideoPlayer.Init();
             GetPermissions();
             LoadApplication(new App());
         }
@@ -57,6 +60,9 @@ namespace Notaria23.Droid
                     Manifest.Permission.Camera,
                     Manifest.Permission.ReadExternalStorage,
                     Manifest.Permission.WriteExternalStorage,
+                    Manifest.Permission.AccessCoarseLocation,
+                    Manifest.Permission.AccessFineLocation,
+                    Manifest.Permission.AccessMockLocation
                 }, 0);
             }
             catch

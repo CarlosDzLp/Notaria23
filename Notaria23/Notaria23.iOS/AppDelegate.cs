@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Foundation;
 using UIKit;
+using Notaria23.Helpers;
+using Octane.Xamarin.Forms.VideoPlayer.iOS;
 
 namespace Notaria23.iOS
 {
@@ -23,7 +24,9 @@ namespace Notaria23.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.FormsGoogleMaps.Init(AppConstants.GOOGLE_API_ACCESS_KEY);
             Rg.Plugins.Popup.Popup.Init();
+            FormsVideoPlayer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

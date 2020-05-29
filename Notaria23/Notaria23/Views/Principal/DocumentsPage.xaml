@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:template="clr-namespace:Notaria23.Views.Principal.Template"
+    x:Class="Notaria23.Views.Principal.DocumentsPage"
+    BackgroundColor="White"
+    Title="Requisitos">
+    <ContentPage.Content>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <StackLayout
+                    Margin="10,20">
+                    <Label
+                        TextColor="#5B2273"
+                        Text="En esta sección, usted podrá consultar los requisitos necesarios para llevar a cabo algunas de las operaciones que se realizan en la Notaría 23 del Estado de México."/>
+                    <Image
+                        Source="https://www.notaria23edomex.com.mx/Site/img/requeriments.jpg"/>
+                </StackLayout>
+                <StackLayout
+                    Padding="10">
+                    <template:AccordionViewTemplate
+                        HeaderText="Acta Declarativa de Negocio Diverso"
+                        HeaderTextColor="White"
+                        HeaderOpenedBackgroundColor="#EDEDED"
+                        HeaderBackgroundColor="#5B2273">
+                        <template:AccordionViewTemplate.BodyContent>
+                            <ContentView>
+                                <StackLayout
+                                    Padding="10">
+                                    <Label
+                                        TextColor="#5B2273"
+                                        Text="Presentar formato lleno (el que proporciona la Notaría).
+Identificaciones Oficiales (Credencial del IFE).
+Documentos que acrediten la identidad.
+Documentos sobre los que versará las declaraciones o que acrediten lo manifestado por los comparecientes."/>
+                                </StackLayout>
+                            </ContentView>
+                        </template:AccordionViewTemplate.BodyContent>
+                    </template:AccordionViewTemplate>
+                    <template:AccordionViewTemplate
+                        HeaderText="Acta Declarativa de Nombre"
+                        HeaderTextColor="White"
+                        HeaderOpenedBackgroundColor="#EDEDED"
+                        HeaderBackgroundColor="#5B2273">
+                        <template:AccordionViewTemplate.BodyContent>
+                            <ContentView>
+                                <StackLayout
+                                    Padding="10">
+                                    <Label
+                                        TextColor="#5B2273"
+                                        Text="Presentar formato lleno (el que proporciona la Notaría).
+Identificaciones Oficiales (Credencial del IFE).
+Documentos que acrediten la identidad.
+Diversos documentos oficiales que contengan el error que genera la elaboración del acta."/>
+                                </StackLayout>
+                            </ContentView>
+                        </template:AccordionViewTemplate.BodyContent>
+                    </template:AccordionViewTemplate>
+                    <template:AccordionViewTemplate
+                        HeaderText="Cancelación de Hipoteca"
+                        HeaderTextColor="White"
+                        HeaderOpenedBackgroundColor="#EDEDED"
+                        HeaderBackgroundColor="#5B2273">
+                        <template:AccordionViewTemplate.BodyContent>
+                            <ContentView>
+                                <StackLayout
+                                    Padding="10">
+                                    <Label
+                                        TextColor="#5B2273"
+                                        Text="Carta de instrucción expedida por el acreedor (en caso de ser entidad financiera, como INFONAVIT, FOVISSSTE o Bancos)
+Escritura donde se constituyó la hipoteca.
+Identificación del acreedor"/>
+                                </StackLayout>
+                            </ContentView>
+                        </template:AccordionViewTemplate.BodyContent>
+                    </template:AccordionViewTemplate>
+                    <template:AccordionViewTemplate
+                        HeaderText="constitución de régimen de propiedad en condominio (distrito federal)"
+                        HeaderTextColor="White"
+                        HeaderOpenedBackgroundColor="#EDEDED"
+                        HeaderBackgroundColor="#5B2273">
+                        <template:AccordionViewTemplate.BodyContent>
+                            <ContentView>
+                                <StackLayout
+                                    Padding="10">
+                                    <Label
+                                        TextColor="#5B2273"
+                                        Text="Antecedente de Propiedad.
+Acta de Matrimonio.
+Licencia de Construcción.
+Certificado de Zonificación (la solicita el Notario).
+Constancia de Alineamiento.
+Constancia de Número Oficial.
+Planos de los inmuebles (dos copias).
+Reglamento del Condominio.
+Descripción General del Inmueble.
+Tabla de Valores y Porcentajes de Indivisos.
+Identificaciones Oficiales (Credencial de IFE)."/>
+                                </StackLayout>
+                            </ContentView>
+                        </template:AccordionViewTemplate.BodyContent>
+                    </template:AccordionViewTemplate>
+                    <template:AccordionViewTemplate
+                        HeaderText="constitución de régimen de propiedad en condominio (estado de méxico)"
+                        HeaderTextColor="White"
+                        HeaderOpenedBackgroundColor="#EDEDED"
+                        HeaderBackgroundColor="#5B2273">
+                        <template:AccordionViewTemplate.BodyContent>
+                            <ContentView>
+                                <StackLayout
+                                    Padding="10">
+                                    <Label
+                                        TextColor="#5B2273"
+                                        Text="Antecedente de Propiedad (escritura original).
+Boletas de predio y agua al corriente.
+Licencia de Uso de Suelo.
+Autorización (Expedida por la Oficina de Obras Públicas).
+Constancia de Número Oficial.
+Constancia de Alineamiento.
+Licencia de Construcción.
+Descripción, Superficie, Medidas y Colindancias, así como porcentaje y valor de cada Departamento.
+Reglamento de Condominio.
+Planos (tres copias).
+Identificaciones Oficiales (Credencial de IFE)."/>
+                                </StackLayout>
+                            </ContentView>
+                        </template:AccordionViewTemplate.BodyContent>
+                    </template:AccordionViewTemplate>
+                    <template:AccordionViewTemplate
+                        HeaderText="INFONAVIT"
+                        HeaderTextColor="White"
+                        HeaderOpenedBackgroundColor="#EDEDED"
+                        HeaderBackgroundColor="#5B2273">
+                        <template:AccordionViewTemplate.BodyContent>
+                            <ContentView>
+                                <StackLayout
+                                    Padding="10">
+                                    <Label
+                                        TextColor="#5B2273"
+                                        Text="Para los trámites de CV Y CREDITO INFONAVIT es necesario presentar los siguientes documentos, independientemente de los que se requieran en cada municipio o estado, tal como se específica en la sección inferior.
+
+Título de Propiedad inscrito en Registro Público con datos de inscripción.
+Constancia de crédito expedida por el INFONAVIT.
+Solicitud de inscripción llenada y firmada por el solicitante.
+Acta de matrimonio de la parte compradora y parte vendedora (para el caso de estar casados)
+Acta de nacimiento, ID, CURP y RFC de parte compradora, parte vendedora y ,en su caso, de sus respectivos cónyuges.
+Avalúo original. (Para la CDMX también presentar la hoja de tesorería correspondiente al avalúo para el pago de impuestos)
+EDOMEX: Boletas de predio y agua del año en curso y los cinco años anteriores
+CDMX: Boletas de predio y agua del útlimo bimestre en curso.
+
+para efectos de solicitar la exención de la parte vendedora por la venta de algún inmueble, se deberá presentar la siguiente documentación:
+INE original que contenga la dirección exacta del inmueble.
+Recibos fiscales de luz o telefonía fija de los 6 meses actuales.
+Estados de cuenta bancarios o casas no comerciales (sky, dish, liverpool, coopel)
+
+Esta documentación podrá estar a nombre de padres o hijos de la o el solicitante de la exención, únicamente se deberá acreditar la filiación con el acta de nacimiento correspondiente."/>
+                                </StackLayout>
+                            </ContentView>
+                        </template:AccordionViewTemplate.BodyContent>
+                    </template:AccordionViewTemplate>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -8,22 +8,12 @@ namespace Notaria23
 {
     public partial class App : Application
     {
+        public static MasterDetailPage MasterDetailPage { get; set; }
         public App()
         {
             InitializeComponent();
-            var user = DbContext.Instance.GetUser();
-            if (user != null)
-            {
-                MainPage = new NavigationViewPage(new Views.Principal.MasterPage());
-            }
-            else
-            {
-                MainPage = new NavigationPage(new Views.Session.LoginPage())
-                {
-                    BarTextColor = Color.White,
-                    BarBackgroundColor = Color.FromHex("#5B2273")
-                };
-            }           
+           
+            MainPage = new Views.Principal.MasterPage();         
         }
 
         protected override void OnStart()

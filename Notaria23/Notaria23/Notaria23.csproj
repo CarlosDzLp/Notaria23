@@ -19,26 +19,24 @@
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.2" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.2.0" />
+    <PackageReference Include="Octane.Xam.VideoPlayer" Version="3.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Views\Session\" />
     <Folder Include="Resources\" />
     <Folder Include="Utils\" />
     <Folder Include="ViewModels\Base\" />
-    <Folder Include="ViewModels\Session\" />
     <Folder Include="Views\Principal\" />
     <Folder Include="Service\" />
     <Folder Include="Models\" />
-    <Folder Include="Models\Authenticate\" />
-    <Folder Include="Models\User\" />
     <Folder Include="Converts\" />
     <Folder Include="DataBase\" />
     <Folder Include="ViewModels\Principal\" />
-    <Folder Include="Views\Principal\Popup\" />
-    <Folder Include="ViewModels\Principal\Popup\" />
+    <Folder Include="Models\Menus\" />
+    <Folder Include="Views\Principal\Template\" />
   </ItemGroup>
 </Project>

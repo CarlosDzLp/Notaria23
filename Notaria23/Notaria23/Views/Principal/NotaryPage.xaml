@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:videoplayer="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
+    x:Class="Notaria23.Views.Principal.NotaryPage"
+    BackgroundColor="White"
+    Title="Notaria">
+    <ContentPage.Content>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <StackLayout
+                    Margin="0,10,0,0">
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        TextColor="#5B2273"
+                        Text="Historia de la notaría"/>
+                    <Image
+                        Source="https://www.notaria23edomex.com.mx/Site/img/Abuelo.png"/>
+                    <Label
+                        Margin="10,0"
+                        TextColor="#5B2273"
+                        Text="La Notaria 23 del Estado de México, fue la primera Notaria que abrió sus puertas al naciente municipio de Ciudad Nezahualcoyotl en el año de 1964. Designada en un principio Notaria 4 del Distrito Judicial de Texcoco con Residencia en Nezahualcoyotl, tuvo como cabeza al Notario Alejandro Altamirano Altamirano -hombre respetado en la comunidad- el cual contribuyó al desarrollo del nuevo municipio brindado regularización inmobiliaria y territorial a través de los Instrumentos Notariales otorgados ante su Fe.
+
+Posteriormente, en el año de 1981, se nombró como titular de la Notaria a la Licenciada Flor de Maria Altamirano Mayorga, hija del respetado Notario Alejandro Altamirano Altamirano, y que por más de 30 años brindo sus servicios a la Comunidad tanto del Estado de México como del entonces Distrito Federal (actualmente la Ciudad de México) con probidad y honradez ganando prestigio y reconocimiento a la Notaria que en el año de dos mil dos se reasigno como Notaria 23 del Estado de México.
+
+Actualmente la Notaria 23 del Estado de México se encuentra bajo la titularidad de la M. en D. Flor Alejandra Kiwan Altamirano, tercera generación de la Familia Altamirano en la función notarial, quien continúa preservando la tradición y valores notariales de tres generaciones adaptándolas al nuevo paradigma jurídico y a las necesidades de una sociedad en la era digital que sigue requiriendo los servicios de una Institución tan antigua pero a la vez tan vigente como la Función Notarial."/>
+                    <Image
+                        Source="https://www.notaria23edomex.com.mx/Site/img/notary2.jpg"/>
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        TextColor="#5B2273"
+                        Text="Mision"/>
+                    <Label
+                        Margin="10,0"
+                        TextColor="#5B2273"
+                        Text="Servir a la comunidad y contribuir a la seguridad jurídica de la Sociedad para mantener la convivencia pacifica y la estabilidad social."/>
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        TextColor="#5B2273"
+                        Text="Vision"/>
+                    <Label
+                        Margin="10,0"
+                        TextColor="#5B2273"
+                        Text="Dar una nueva imagen al Notariado, no como un ente inalcanzable, sino como una consejera y servidora para la gente que lo requiera; brindando el mejor servicio acorde con las nuevas tecnologías y las necesidades de la nueva era."/>
+                    <videoplayer:VideoPlayer
+                        Margin="10,0"
+        x:Name="VideoPlayer"
+                        Source="https://www.notaria23edomex.com.mx/Site/video/Introduccion%20final.mp4"
+        DisplayControls="True"
+        FillMode="ResizeAspectFill"
+        AutoPlay="True"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

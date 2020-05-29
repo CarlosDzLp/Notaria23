@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns:fontawesome="clr-namespace:Notaria23.Utils"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Notaria23.Views.Principal.Template.AccordionViewTemplate">
+    <ContentView.Content>
+        <StackLayout>
+            <StackLayout>
+                <Grid
+                    x:Name="HeaderView"
+                    Padding="10,10,0,10"
+                    ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        x:Name="HeaderLabel"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="10,0"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        LineBreakMode="WordWrap"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Padding="0,0,10,0">
+                        <Label
+                            TextColor="White"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Plus}"
+                            x:Name="IndicatorLabel"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+                </Grid>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Handle_Tapped" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <StackLayout x:Name="BodyView" Margin="0,-6,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Grid ColumnSpacing="0" RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Row="0" Grid.Column="0">
+                                <!--  CUERPO DEL ACCORDION  -->
+                                <ScrollView VerticalScrollBarVisibility="Never">
+                                    <ContentView x:Name="Body" />
+                                </ScrollView>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

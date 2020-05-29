@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Notaria23.Controls"
+    x:Class="Notaria23.Views.Principal.ContactPage"
+    xmlns:fontawesome="clr-namespace:Notaria23.Utils"
+    xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+    BackgroundColor="White"
+    Title="Contacto">
+    <ContentPage.Content>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Padding="10,0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="Av. Cuauhtémoc N° 13, Col. México 1a Sección, C.P. 57620, Nezahualcóyotl, Estado de México."
+                        TextColor="#5B2273"/>
+                </StackLayout>
+                <maps:Map
+                    Margin="10,0"
+                    x:Name="map"
+                    HeightRequest="400">
+                </maps:Map>
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Padding="10,0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="Correos"
+                        TextColor="#5B2273"/>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="10"
+                            VerticalOptions="Center"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Point}"
+                            TextColor="#5B2273"/>
+                        <Label
+                            VerticalOptions="Center"
+                            Text="contacto@notaria23edomex.com.mx"
+                            TextColor="#5B2273"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="10"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Point}"
+                            TextColor="#5B2273"/>
+                        <Label
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            Text="asesores@notaria23edomex.com.mx"
+                            TextColor="#5B2273"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Padding="10,0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="Telefonos"
+                        TextColor="#5B2273"/>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="10"
+                            VerticalOptions="Center"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Point}"
+                            TextColor="#5B2273"/>
+                        <Label
+                            VerticalOptions="Center"
+                            Text="5797-1096 con siete líneas"
+                            TextColor="#5B2273"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Padding="10,0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="Horarios de atención"
+                        TextColor="#5B2273"/>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="10"
+                            VerticalOptions="Center"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Point}"
+                            TextColor="#5B2273"/>
+                        <Label
+                            VerticalOptions="Center"
+                            Text="Lunes a jueves de 9 am a 5 pm"
+                            TextColor="#5B2273"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="10"
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Point}"
+                            TextColor="#5B2273"/>
+                        <Label
+                            VerticalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            Text="Viernes de 9 am a 4 pm"
+                            TextColor="#5B2273"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Padding="10,0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="Redes sociales"
+                        TextColor="#5B2273"/>
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            FontSize="10"
+                            VerticalOptions="Center"
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Text="{x:Static fontawesome:FontAwesomeIcons.Point}"
+                            TextColor="#5B2273"/>
+                        <Label
+                            VerticalOptions="Center"
+                            Text="Síganos en Facebook"
+                            TextColor="#5B2273"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Spacing="10"
+                    Margin="0,20,0,40"
+                    Padding="10,0">
+                    <controls:CanvasView
+                        CornerRadius="10"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="0"/>
+                                <On Platform="iOS" Value="10"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Entry
+                            Placeholder="Nombre"
+                            PlaceholderColor="Gray"/>
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="10"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="0"/>
+                                <On Platform="iOS" Value="10"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Entry
+                            Placeholder="Correo electronico"
+                            PlaceholderColor="Gray"/>
+                    </controls:CanvasView>
+                    <controls:CanvasView
+                        CornerRadius="10"
+                        BackgroundColor="#EDEDED">
+                        <controls:CanvasView.Padding>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <On Platform="Android" Value="0"/>
+                                <On Platform="iOS" Value="5"/>
+                            </OnPlatform>
+                        </controls:CanvasView.Padding>
+                        <Editor
+                            BackgroundColor="#EDEDED"
+                            HeightRequest="150"
+                            Placeholder="Mensaje"
+                            PlaceholderColor="Gray"/>
+                    </controls:CanvasView>
+                    <Button
+                        TextColor="White"
+                        CornerRadius="0"
+                        BackgroundColor="#5B2273"
+                        Text="Enviar"/>
+                </StackLayout>               
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TabbedPage
+<MasterDetailPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:page="clr-namespace:Notaria23.Views.Principal"
-    x:Class="Notaria23.Views.Principal.MasterPage"
-    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-    android:TabbedPage.ToolbarPlacement="Bottom"
-    BarBackgroundColor="White"
-    SelectedTabColor="#5B2273"
-    UnselectedTabColor="#D9DBE3">
+    xmlns:controls="clr-namespace:Notaria23.Controls"
+    x:Class="Notaria23.Views.Principal.MasterPage">
+    <MasterDetailPage.Master>
+        <page:MenuPage/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <controls:NavigationViewPage>
+            <x:Arguments>
+                <page:HomePage/>
+            </x:Arguments>
+        </controls:NavigationViewPage>
+    </MasterDetailPage.Detail>
     <!--Pages can be added as references or inline-->
-</TabbedPage>
+</MasterDetailPage>
